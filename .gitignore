@@ -1,0 +1,11 @@
+# Ignore = IGN
+# IGN httpcache as the folder has a huge amount of small files
+Wiki_News_Scrapy/.scrapy/httpcache/
+
+# IGN ipynb_checkpoints-files as they can be local
+.ipynb_checkpoints
+
+# IGN files inside as they can be created from project-files
+Database_CSV_IN/*
+# Need one file to save save folder in git
+!Database_CSV_IN/small_sample.csv
