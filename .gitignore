@@ -1,6 +1,6 @@
 # Ignore = IGN
 # IGN httpcache as the folder has a huge amount of small files
-Wiki_News_Scrapy/.scrapy/httpcache/
+.scrapy
 
 # IGN ipynb_checkpoints-files as they can be local
 .ipynb_checkpoints
