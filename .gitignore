@@ -10,3 +10,6 @@ Database_CSV_IN/*
 # Need one file to save save folder in git
 !Database_CSV_IN/small_sample.csv
 Organize_Daniel_crash.ipynb
+
+# IGN files in
+Data_sample/*.csv
