@@ -32,16 +32,19 @@ def move(file_name='(file_name missing/)', src='(src missing/)', dst='(dst missi
         if print_out:
             print('\nAfter\n- Files in src: %s\n- Files in dst: %s' % ( (os.listdir(src)) , (os.listdir(dst)) ))
     else:
-        print('Error - Info below for fixing\n\nMove() callend from: [%s]\n' % (os.getcwd()))
-        # Describe how the imputs are wrong
-        print('Arguments to function are: file_name, src, dst')
-        if not file_in_src and src_is_folder:
-            print('- No file: [%s] located in src: [%s]' % (file_name, src))
-            # show what is in src
-            if src_is_folder:
-                print("   Files in src %s\n" % (os.listdir(src)))
-        # show what folders are valid
-        if not src_is_folder:
-            print('- Not valid src-folder: [%s]' % (src))
-        if not dst_is_folder:
-            print('- Not valid dst-folder: [%s]' % (dst))
+        if os.path.isfile(dst+file_name):
+            print('File [%s] already in dst' % (file_name))
+        else:
+            print('Error - Info below for fixing\n\nMove() callend from: [%s]\n' % (os.getcwd()))
+            # Describe how the imputs are wrong
+            print('Arguments to function are: file_name, src, dst')
+            if not file_in_src and src_is_folder:
+                print('- No file: [%s] located in src: [%s]' % (file_name, src))
+                # show what is in src
+                if src_is_folder:
+                    print("   Files in src %s\n" % (os.listdir(src)))
+            # show what folders are valid
+            if not src_is_folder:
+                print('- Not valid src-folder: [%s]' % (src))
+            if not dst_is_folder:
+                print('- Not valid dst-folder: [%s]' % (dst))
