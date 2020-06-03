@@ -1,16 +1,18 @@
 # Ignore = IGN
+
+# IGN .ionide as it is not part of project
+.ionide
+
 # IGN httpcache as the folder has a huge amount of small files
 .scrapy
 
-# IGN ipynb_checkpoints-files as they can be local
+# IGN .ipynb_checkpoints-files as they can be local
 .ipynb_checkpoints
 
-# IGN files inside as they can be created from project-files
-Database_CSV_IN/*
-# Need one file to save save folder in git
-!Database_CSV_IN/small_sample.csv
-Organize_Daniel_crash.ipynb
+# IGN .csv files as they can be large [other files allowed]
+Appendix/Data_git_ignore/*
+# KEEP FakeNewsCorpus_250.csv as it is useful for debug
+!Appendix/Data_git_ignore/FakeNewsCorpus_250.csv
 
-# IGN files in Data_git_ignore
-Data_git_ignore/*.csv
-
+# Keep folder that might be empty
+!.gitkeep
