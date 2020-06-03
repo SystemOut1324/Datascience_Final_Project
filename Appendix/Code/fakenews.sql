@@ -1,16 +1,19 @@
-CREATE TABLE fakenews_Domain_Name (
+/* Create schema make collection of database objects including tables, views, triggers, stored procedures, indexes, etc*/
+CREATE SCHEMA fakenews;
+
+CREATE TABLE fakenews.Domain_Name (
     Domain_Id int,
     Domain_Name varchar(255),
     PRIMARY KEY (Domain_Id)
 );
 
-CREATE TABLE fakenews_Type (
+CREATE TABLE fakenews.Type (
     Type_Id int,
     Type varchar(1000),
     PRIMARY KEY (Type_Id)
 );
 
-CREATE TABLE fakenews_Article (
+CREATE TABLE fakenews.Article (
     ID int,
     Domain_Id int,
     Type_Id int,
@@ -26,13 +29,13 @@ CREATE TABLE fakenews_Article (
     FOREIGN KEY (Type_Id) References Type
 );
 
-CREATE TABLE fakenews_Tags (
+CREATE TABLE fakenews.Tags (
     Tag_Id int,
     Tag varchar(1000),
     PRIMARY KEY (Tag_Id)
 );
 
-CREATE TABLE fakenews_Tags_In (
+CREATE TABLE fakenews.Tags_In (
 	Tag_Id int,
     ID int,
     PRIMARY KEY (ID, Tag_Id),
@@ -40,13 +43,13 @@ CREATE TABLE fakenews_Tags_In (
     FOREIGN KEY(Tag_Id) References Tags
 );
 
-CREATE TABLE fakenews_Author (
+CREATE TABLE fakenews.Author (
     AuthorID int,
     AuthorName varchar(255),
     PRIMARY KEY (AuthorID)
 );
 
-CREATE TABLE fakenews_Author_In (
+CREATE TABLE fakenews.Author_In (
 	AuthorID int,
     ID Int,
     PRIMARY KEY (ID, AuthorID),
@@ -54,13 +57,13 @@ CREATE TABLE fakenews_Author_In (
     FOREIGN KEY(AuthorID) References Author
 );
 
-CREATE TABLE fakenews_Meta_Keywords (
+CREATE TABLE fakenews.Meta_Keywords (
     Meta_Keyword_id int,
     Meta_Keyword varchar(500),
     PRIMARY KEY (Meta_Keyword_id)
 );
 
-CREATE TABLE fakenews_Meta_Keywords_In (
+CREATE TABLE fakenews.Meta_Keywords_In (
 	Meta_Keyword_id int,
     ID int,
     PRIMARY KEY (ID, Meta_Keyword_id),
