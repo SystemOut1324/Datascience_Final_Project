@@ -11,5 +11,6 @@ Database_CSV_IN/*
 !Database_CSV_IN/small_sample.csv
 Organize_Daniel_crash.ipynb
 
-# IGN files in
-Data_sample/*.csv
+# IGN files in Data_git_ignore
+Data_git_ignore/*.csv
+
