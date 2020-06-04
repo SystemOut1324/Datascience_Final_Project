@@ -46,18 +46,18 @@ CREATE SCHEMA fakenews
         FOREIGN KEY(Tag_Id) References Tags
     )
 
-    CREATE TABLE Author (
+    CREATE TABLE Authors (
         AuthorID int,
         AuthorName varchar(255),
         PRIMARY KEY (AuthorID)
     )
 
-    CREATE TABLE Author_In (
+    CREATE TABLE Authors_In (
         AuthorID int,
         ID Int,
         PRIMARY KEY (ID, AuthorID),
         FOREIGN KEY(ID) References Article,
-        FOREIGN KEY(AuthorID) References Author
+        FOREIGN KEY(AuthorID) References Authors
     )
 
     CREATE TABLE Meta_Keywords (
