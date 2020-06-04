@@ -8,6 +8,7 @@ CREATE SCHEMA wikinews
     CREATE TABLE article (
         article_id   int,
         content      TEXT,
+        category     int,
         title        varchar(1000),
         screaped_at  DATE,
         publish_date DATE,
