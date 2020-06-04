@@ -20,7 +20,7 @@ TRUNCATE TABLE fakenews.meta_keywords CASCADE;
 TRUNCATE TABLE fakenews.meta_keywords_in CASCADE;
 
 /* Used for encoding error */
- SET CLIENT_ENCODING TO 'utf8';
+SET CLIENT_ENCODING TO 'utf8';
 
 /* COPY into SCHEMA */
 COPY fakenews.domain_name FROM 'd:/Personal/OneDrive/KU-uni/DataScience/Python/Datascience_Final_Project/Appendix/Data_git_ignore/clean_csv/domain_name.csv' DELIMITER ',' CSV HEADER;
