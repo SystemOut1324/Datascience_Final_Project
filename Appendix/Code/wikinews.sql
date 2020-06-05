@@ -7,7 +7,7 @@ CREATE SCHEMA wikinews
     /* entities eller hvad det nu hedder */
     CREATE TABLE article (
         article_id   int,
-        content      TEXT,
+        content      varchar(255)[],
         category     int,
         title        varchar(1000),
         screaped_at  DATE,
