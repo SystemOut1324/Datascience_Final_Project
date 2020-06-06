@@ -29,16 +29,16 @@ CREATE SCHEMA wikinews
 
     /* relations */
     CREATE TABLE source_to (
-        article_id       int,
         source_domain_id int,
+        article_id       int,
         PRIMARY KEY (article_id, source_domain_id),
         FOREIGN KEY (article_id)       References article,
         FOREIGN KEY (source_domain_id) References sources
     )
 
     CREATE TABLE in_category (
-        article_id  Int,
         category_id int,
+        article_id  Int,
         PRIMARY KEY (article_id, category_id),
         FOREIGN KEY (article_id)  References article,
         FOREIGN KEY (category_id) References categories
