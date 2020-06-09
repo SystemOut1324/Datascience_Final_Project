@@ -18,7 +18,7 @@ CREATE SCHEMA wikinews
 
     CREATE TABLE sources (
         source_domain_id int,
-        source_domain    varchar(255),
+        source_domain    varchar(4048),
         PRIMARY KEY (source_domain_id)
     )
 
