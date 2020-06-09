@@ -49,7 +49,7 @@ CREATE SCHEMA fakenews
 
     CREATE TABLE Authors (
         AuthorID   int,
-        AuthorName varchar(255),
+        AuthorName varchar(1024),
         PRIMARY KEY (AuthorID)
     )
 
