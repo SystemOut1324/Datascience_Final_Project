@@ -23,7 +23,7 @@ TRUNCATE TABLE fakenews.meta_keywords_in CASCADE;
 SET CLIENT_ENCODING TO 'utf8';
 
 /* COPY into SCHEMA */
-\COPY fakenews.domain_name FROM 'd:/Personal/OneDrive/KU-uni/DataScience/Python/Datascience_Final_Project/Appendix/Data_git_ignore/clean_csv/domain_name.csv' DELIMITER ',' CSV HEADER;
+COPY fakenews.domain_name FROM 'd:/Personal/OneDrive/KU-uni/DataScience/Python/Datascience_Final_Project/Appendix/Data_git_ignore/clean_csv/domain.csv' DELIMITER ',' CSV HEADER;
 
 COPY fakenews.type FROM 'd:/Personal/OneDrive/KU-uni/DataScience/Python/Datascience_Final_Project/Appendix/Data_git_ignore/clean_csv/type.csv' DELIMITER ',' CSV HEADER;
 
@@ -40,6 +40,4 @@ COPY fakenews.authors_in FROM 'd:/Personal/OneDrive/KU-uni/DataScience/Python/Da
 COPY fakenews.meta_keywords FROM 'd:/Personal/OneDrive/KU-uni/DataScience/Python/Datascience_Final_Project/Appendix/Data_git_ignore/clean_csv/meta_keywords.csv' DELIMITER ',' CSV HEADER;
 
 COPY fakenews.meta_keywords_in FROM 'd:/Personal/OneDrive/KU-uni/DataScience/Python/Datascience_Final_Project/Appendix/Data_git_ignore/clean_csv/meta_keywords_in.csv' DELIMITER ',' CSV HEADER;
-
-
 
