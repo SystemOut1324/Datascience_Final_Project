@@ -6,12 +6,13 @@ CREATE SCHEMA wikinews
 
     /* entities eller hvad det nu hedder */
     CREATE TABLE article (
-        article_id   int,
-        content      varchar(255)[],
-        category     int,
-        title        varchar(1000),
-        screaped_at  DATE,
-        publish_date DATE,
+        article_id       int,
+        Content_tokenize varchar(255)[],
+        Content          TEXT,
+        category         int,
+        title            varchar(1000),
+        screaped_at      DATE,
+        publish_date     DATE,
         PRIMARY KEY (article_id)
     )
 
